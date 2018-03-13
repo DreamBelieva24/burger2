@@ -1,0 +1,24 @@
+
+<h1>Order Up!</h1>
+
+<ul>
+  {{#each burger}}
+  <li>
+    <p>{{this.burger_name}}
+    <form><input type="hidden" name="id" value="{{this.id}}">
+    <button id="ready" type="submit">Ready!</button> 
+    </form>
+    </p>
+  </li>
+  {{/each}}
+</ul>
+
+<h2>Put in your order here...</h2>
+<form method="POST" action="/create">
+
+    <label for="ca">Order:</label>
+    <input type="text" name="name">
+
+  <button type="submit">Send to Cooks</button>
+  
+</form>
