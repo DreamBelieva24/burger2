@@ -58,11 +58,10 @@ app.post("/create", function(req, res) {
 
 
 
-function update(){
-  app.put("/update", function(req, res) {
-    connection.query("UPDATE burger SET devoured = ? WHERE id = ?;", [true, req.body.id], function(err,data){
+
+  app.put("/update/:id", function(req, res) {
+    connection.query("UPDATE burger SET devoured = ? WHERE id = ?;", [true, req.params.id], function(err,data){
       res.redirect('/')
     })
   
   })
-}

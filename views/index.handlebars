@@ -5,7 +5,7 @@
   {{#each burger}}
   <li>
     <p>{{this.burger_name}}
-    <form><input type="hidden" name="id" value="{{this.id}}">
+    <form method="POST" action="/update_method=PUT"><input type="hidden" name="id" value="{{this.id}}">
     <button id="ready" type="submit">Ready!</button> 
     </form>
     </p>
